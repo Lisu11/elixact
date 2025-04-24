@@ -44,7 +44,7 @@ defmodule UserSchema do
       description "User's age"
       gt 0
       lt 150
-      optional true
+      optional()
     end
 
     field :email, :string do
@@ -109,7 +109,7 @@ defmodule ComplexSchema do
 
     # Nested schema
     field :address, AddressSchema do
-      optional true
+      optional()
     end
 
     # Map with specific key/value types

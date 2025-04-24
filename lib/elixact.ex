@@ -14,20 +14,20 @@ defmodule Elixact do
           field :name, :string do
             description "User's full name"
             example "John Doe"
-            required true
+            required()
             min_length 2
           end
 
           field :age, :integer do
             description "User's age in years"
-            optional true
+            optional()
             gt 0
             lt 150
           end
 
           field :email, Types.Email do
             description "User's email address"
-            required true
+            required()
           end
 
           config do
