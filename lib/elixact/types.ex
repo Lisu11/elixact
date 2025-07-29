@@ -99,7 +99,7 @@ defmodule Elixact.Types do
 
       other ->
         if match?({:module, _}, Code.ensure_compiled(other)) &&
-+             function_exported?(other, :type_definition, 0) do
+             function_exported?(other, :type_definition, 0) do
           other.type_definition()
         else
           # Assume schema module reference
